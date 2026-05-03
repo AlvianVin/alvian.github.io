@@ -64,20 +64,11 @@
                 <div class="col-4">
                     Hello! I am an Informatics Engineering student at Dipa Makassar University, currently pursuing my degree. I am a
                     fullstack developer with experience in web and mobile application development.
-                    
-                    I enjoy building responsive and user-friendly applications, and I am comfortable working on both front-end and back-end.
-                    I am continuously learning and improving my skills to grow as a professional developer.
                 </div>
                 <div class="col-4">
                     I am a curious and dedicated individual who enjoys learning and exploring new technologies. I see every project as an
                     opportunity to grow, improve my skills, and gain new experience. For me, consistency and discipline are key to becoming
                     better every day.
-                    
-                    In my work, I focus on writing clean, efficient, and maintainable code. I enjoy solving problems and turning ideas into
-                    functional applications that provide real value. I also believe that good communication and continuous learning are
-                    important aspects of being a developer.
-                    
-                    I am always open to new challenges and opportunities that can help me grow both personally and professionally.
                 </div>
             </div>
         </div>
@@ -100,7 +91,7 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="img/project1.png" class="card-img-top" alt="project saya" height="322px">
+                        <img src="img/project1.png" class="card-img-top" alt="project saya" width="200px">
                         <div class="card-body">
                             <h5 class="card-title">Customer Input</h5>
                             <p class="card-text">Aplikasi input untuk admin</p>
@@ -110,7 +101,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="img/WhatsApp Image 2026-03-15 at 18.00.20 (1).jpeg" class="card-img-top" alt="sertifikat saya" height="350px">
+                        <img src="img/WhatsApp Image 2026-03-15 at 18.00.20 (1).jpeg" class="card-img-top" alt="sertifikat saya" height="200px">
                         <div class="card-body">
                             <h5 class="card-title">Sertificate</h5>
                             <p class="card-text">Setrifikat Kompetensi junior Web Developer Dari Komdigi</p>
@@ -119,8 +110,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="img/WhatsApp Image 2026-03-15 at 18.00.20.jpeg" class="card-img-top" alt="sertifikat saya"
-                            height="350px">
+                        <img src="img/WhatsApp Image 2026-03-15 at 18.00.20.jpeg" class="card-img-top" alt="sertifikat saya" height="200px">
                         <div class="card-body">
                             <h5 class="card-title">Sertificate</h5>
                             <p class="card-text">Setrifikat Kompetensi junior Web Developer Dari Komdigi</p>
@@ -147,20 +137,28 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-6">
-                        <form>
+                        <div class="alert alert-success alert-dismissible fade show d-none myAlert" role="alert">
+                            <strong>pesan anda sudah masuk</strong> Terima kasih telah mengunjungi website kami.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <form name="contact-message-portfolio">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Your Name</label>
-                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="nama">
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email" aria-describedby="email">
+                                <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
                             </div>
                             <div class="mb-3">
                                 <label for="pesan" class="form-label">Message</label>
-                                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" id="kirim">Send</button>
+                            <button type="submit" class="btn btn-primary btn-kirim" id="kirim">Send</button>
+                            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                <span role="status">Loading...</span>
+                            </button>
                         </form>
                     </div>
                 </div>

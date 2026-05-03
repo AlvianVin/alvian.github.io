@@ -1,3 +1,4 @@
+// scrooll smooth
 const links = document.querySelectorAll('.nav-link, .navbar-brand');
 const navbar = document.querySelector('.navbar');
 const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -27,6 +28,8 @@ function smoothScroll(targetPosition, duration = 800) {
   requestAnimationFrame(animation);
 }
 
+
+// contact message googlesheets
 links.forEach(link => {
   link.addEventListener('click', function (e) {
     const targetId = this.getAttribute('href');
@@ -51,3 +54,30 @@ links.forEach(link => {
     }
   });
 });
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx57_JuqtY_UYJvrZN3vtlA31PKOtgNQ14Gx7zh0tTNV2zjeIHUQdI9-Q4ZEqHl7jXp/exec'
+const form = document.forms['contact-message-portfolio']
+const btnKirim = document.querySelector('.btn-kirim');
+const btnLoading = document.querySelector('.btn-loading');
+const myAlert  = document.querySelector('.myAlert')
+
+form.addEventListener('submit', e => {
+	e.preventDefault()
+  // ketika tombol submit di klik
+  // tampilkan btn-loading, hilangkan tombol kirim
+  btnLoading.classList.toggle('d-none');
+  btnKirim.classList.toggle('d-none');
+	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+		.then(response => response.json())
+		.then(response => {
+      console.log('Success!', response)
+      // tampolkan alert
+      myAlert.classList.toggle('d-none');
+      // tampilkan btn-kirim, hilangkan tombol loading
+      btnLoading.classList.toggle('d-none');
+      btnKirim.classList.toggle('d-none');
+      // reset form nya
+      form.reset();
+    })
+		.catch(error => console.error('Error!', error.message))
+})
