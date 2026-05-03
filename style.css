@@ -1,0 +1,54 @@
+.jumbotron {
+    padding-top: 5rem;
+    background-color: #3dc3f4;
+}
+
+img {
+    width: 150px;
+    margin-top: 20px;
+}
+
+#projects {
+    background-color: #3dc3f4;
+}
+
+section {
+    padding-top: 1rem;
+}
+
+svg {
+    margin-left: -100px;
+    margin-right: -100px;
+}
+
+#name, #email, #pesan, #kirim {
+        /*filter: drop-shadow(x-offset y-offset blur-radius color);
+            */
+            filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+            -webkit-filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+#social {
+    /*filter: drop-shadow(x-offset y-offset blur-radius color);
+    */filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+    margin: 7px;
+    transition: transform 0.4s ease;
+    -webkit-transition: transform 0.4s ease;
+    -moz-transition: transform 0.4s ease;
+    -ms-transition: transform 0.4s ease;
+    -o-transition: transform 0.4s ease;
+}
+
+#social:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
