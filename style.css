@@ -16,11 +16,6 @@ section {
     padding-top: 1rem;
 }
 
-svg {
-    margin-left: -100px;
-    margin-right: -100px;
-}
-
 #name, #email, #pesan, #kirim {
         /*filter: drop-shadow(x-offset y-offset blur-radius color);
             */
