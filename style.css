@@ -43,16 +43,6 @@ img {
     background-color: #3dc3f4;
 }
 
-#gallery .row > * {
-    padding: 0;
-}
-
-.gallery {
-    width: 100%;
-    height: 250px;
-}
-
-
 section {
     padding-top: 1rem;
 }
