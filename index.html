@@ -5,9 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>portfolio-bosstrap5 | ALVIAN</title>
+    <!-- bootstrap5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- my css -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -41,8 +47,10 @@
 
     <!-- Jumbotron -->
     <section id="home" class="jumbotron text-center">
-        <img src="img/foto.webp" alt="foto saya" class="rounded-circle">
-        <h1 class="display-4">ALVIAN</h1>
+        <img src="img/foto.webp" alt="foto saya" class="profile-img">
+        <h1 class="typing-text">I'm
+            <span id="typing"> </span>
+        </h1>
         <p class="lead">Student College Dipa Makassar University | Fullstack Develover</p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#ffffff" fill-opacity="1"
@@ -54,7 +62,7 @@
 
     <!-- About -->
     <section id="about">
-        <div class="container">
+        <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800" data-aos-offset="100">
             <div class="row text-center mb-3">
                 <div class="col">
                     <h2>About Me</h2>
@@ -82,14 +90,14 @@
 
     <!-- projects / sertificate -->
     <section id="projects">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="800" data-aos-offset="100">
             <div class="row text-center mb-3">
                 <div class="col">
                     <h2>My Projects And Sertificate</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
                     <div class="card">
                         <img src="img/project1.png" class="card-img-top" alt="project saya" width="200px">
                         <div class="card-body">
@@ -99,7 +107,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
                     <div class="card">
                         <img src="img/WhatsApp Image 2026-03-15 at 18.00.20 (1).jpeg" class="card-img-top" alt="sertifikat saya" height="200px">
                         <div class="card-body">
@@ -108,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
                     <div class="card">
                         <img src="img/WhatsApp Image 2026-03-15 at 18.00.20.jpeg" class="card-img-top" alt="sertifikat saya" height="200px">
                         <div class="card-body">
@@ -126,6 +134,50 @@
         </svg>
     </section>
     <!-- akhir project / sertificate -->
+
+    <!-- gallery -->
+        <section id="gallery">
+            <div class="container">
+                <div class="row text-center mb-3">
+                    <div class="col">
+                        <h2>Gallery</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <a href="#"> <img class="gallery" src="https://tse3.mm.bing.net/th/id/OIP.JDZjYkcEsHkalnABz_hEcgHaHa?pid=Api&P=0&h=180" alt=""> </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#"> <img class="gallery" src="https://tse3.mm.bing.net/th/id/OIP.eyW6lqVewBfhIsQ1II-43wHaEo?pid=Api&P=0&h=180" alt=""> </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#"> <img class="gallery" src="https://tse2.mm.bing.net/th/id/OIP.rVMUJvCMZNaEePDwTlH_7QHaHa?pid=Api&P=0&h=180" alt=""> </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#"> <img class="gallery" src="https://tse1.mm.bing.net/th/id/OIP.WF2ASOBPwpq9r1CxEHdxcgHaHa?pid=Api&P=0&h=180" alt=""> </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#"> <img class="gallery" src="https://tse2.mm.bing.net/th/id/OIP.yDU5nm6Ol7-gya1wjFND-gHaEK?pid=Api&P=0&h=180" alt=""> </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#"> <img class="gallery" src="https://tse4.mm.bing.net/th/id/OIP.QkR2Iax-fcJH0vOW2PsjCgHaE8?pid=Api&P=0&h=180" alt=""> </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#"> <img class="gallery" src="https://tse1.mm.bing.net/th/id/OIP.WdUjooYsGw5I04qYSIKkswHaHa?pid=Api&P=0&h=180" alt=""> </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#"> <img class="gallery" src="https://tse1.mm.bing.net/th/id/OIP.qboMng3LSTYqd_CJGCFv1wHaEJ?pid=Api&P=0&h=180" alt=""> </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#"> <img class="gallery" src="https://tse4.mm.bing.net/th/id/OIP.aDfpJqd83scV0zzssoi39QHaEK?pid=Api&P=0&h=180" alt=""> </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#"> <img class="gallery" src="https://tse1.mm.bing.net/th/id/OIP.fKQYcMU5xdd1QrAqYA5gMQHaEa?pid=Api&P=0&h=180" alt=""> </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- akhir galler -->
 
     <!-- kontak -->
         <section id="contact">
@@ -183,6 +235,32 @@
         </footer>
     <!-- Akhir footer -->
 
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        const galleryImage = document.querySelectorAll('.gallery');
+
+        galleryImage.forEach((img, i) => {
+            img.dataset.aos = 'fade-down'
+            img.dataset.aosDelay = i * 100;
+            img.dataset.aosDuration = 1500;
+        });
+
+
+        AOS.init({
+            once: true,
+        });
+    </script>
+    <!-- akhir aos -->
+
+    <!-- gsap -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script>
+        gsap.from('.jumbotron img', {duration: 1, y:-100, opacity: 0, ease: 'bounce'});
+    </script> -->
+    <!-- akhir gsap -->
+
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

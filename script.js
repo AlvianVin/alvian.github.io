@@ -28,6 +28,89 @@ function smoothScroll(targetPosition, duration = 800) {
   requestAnimationFrame(animation);
 }
 
+// animasi ketik
+const texts = ["ALVIAN", "fullstack developer"];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+let isDeleting = false;
+let typingStopped = false;
+
+// Ambil elemen & buat kursor
+const typingEl = document.getElementById("typing");
+const cursor = document.createElement("span");
+cursor.textContent = "|";
+cursor.style.fontWeight = "bold";
+cursor.style.marginLeft = "5px";
+cursor.style.color = "#fff";
+cursor.style.animation = "blink 0.7s steps(1) infinite";
+typingEl.appendChild(cursor);
+
+// Tambahkan animasi blink
+const style = document.createElement("style");
+style.textContent = `
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+`;
+document.head.appendChild(style);
+
+// Fungsi utama ketik
+function type() {
+  if (typingStopped) return;
+
+  currentText = texts[count];
+
+  if (!isDeleting) {
+    letter = currentText.slice(0, ++index);
+    typingEl.textContent = letter;
+    typingEl.appendChild(cursor);
+
+    if (letter.length === currentText.length) {
+      // Setelah selesai ngetik, tunggu lalu lanjut ke teks berikutnya
+      setTimeout(() => {
+        index = 0;
+        count = (count + 1) % texts.length;
+        type();
+      }, 1500);
+    } else {
+      setTimeout(type, 100);
+    }
+  }
+}
+
+// Fungsi hapus saat Backspace
+function deleteText() {
+  if (index >= 0) {
+    letter = currentText.slice(0, index--);
+    typingEl.textContent = letter;
+    typingEl.appendChild(cursor);
+    setTimeout(deleteText, 50);
+  } else {
+    typingStopped = true;
+  }
+}
+
+// Mulai ketik
+type();
+
+// Cek tombol Backspace
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Backspace" && !isDeleting) {
+    isDeleting = true;
+    typingStopped = true;
+    deleteText();
+  }
+});
+
+
+// document.getElementById('about').addEventListener('click', function() {
+//   window.location.href = 'about.html';
+// });
+
 
 // contact message googlesheets
 links.forEach(link => {
