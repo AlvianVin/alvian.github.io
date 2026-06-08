@@ -555,6 +555,21 @@ section {
     box-shadow: none;
 }
 
+.btn-glow-cv {
+    border-color: var(--c2);
+    color: var(--c2);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.15), inset 0 0 20px rgba(0, 255, 136, 0.05);
+}
+
+.btn-glow-cv::before {
+    background: var(--c2);
+}
+
+.btn-glow-cv:hover {
+    color: var(--bg);
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.5);
+}
+
 /* hero right */
 .hero-right {
     display: flex;
