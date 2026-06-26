@@ -276,15 +276,31 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 const modal = document.getElementById('imgModal');
 const modalImg = document.getElementById('modalImg');
 
+const openModal = (img) => {
+  modalImg.src = img.src;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden'; // Prevent background scrolling
+};
+
+const closeModal = () => {
+  modal.classList.remove('open');
+  document.body.style.overflow = ''; // Restore background scrolling
+  document.body.classList.remove('cursor-hover'); // Prevent custom cursor sticking
+};
+
 document.querySelectorAll('.proj-img-click').forEach(img => {
-  img.addEventListener('click', () => {
-    modalImg.src = img.src;
-    modal.classList.add('open');
-  });
+  img.addEventListener('click', () => openModal(img));
 });
 
-document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
-modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+document.getElementById('modalClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+// Close modal on Escape key press
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && modal.classList.contains('open')) {
+    closeModal();
+  }
+});
 
 /* ============================================================
    CONTACT FORM — GOOGLE SHEETS

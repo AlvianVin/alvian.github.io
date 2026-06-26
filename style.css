@@ -923,7 +923,7 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
@@ -970,6 +970,7 @@ section {
     display: flex;
     align-items: flex-end;
     padding: 1rem;
+    pointer-events: none;
 }
 
 .proj-card:hover .proj-img-overlay {
@@ -1311,12 +1312,21 @@ footer a {
 }
 
 .img-modal-overlay img {
-    max-width: 85vw;
-    max-height: 85vh;
+    width: 100%;
+    height: 100%;
+    max-width: 60vw;
+    max-height: 80vh;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid var(--glass-border);
     box-shadow: 0 0 60px rgba(0, 245, 255, 0.2);
+}
+
+@media(max-width:768px) {
+    .img-modal-overlay img {
+        max-width: 90vw;
+        max-height: 80vh;
+    }
 }
 
 .modal-close-btn {
